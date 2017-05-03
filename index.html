@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="index.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+    <title>eWolves Gaming</title>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/forum/">Forum</a>
+        <a href="" id="members">Mitglieder</a>
+        <a href="ts3server://ts.ewolves-gaming.de?port=9987" target="_blank" rel="nofollow">Teamspeak</a>
+    </div>
+    <div id="site">
+    <div class="main">
+        <h1>eWolves</h1>
+        <p class="m">
+        <p class="m">
+		Hallo Moin,
+		</p>
+		<p class="m">
+		Herzlich Willkommen auf der Homepage des eWolves Multigamingclans. Wir sind derzeit ca. 40 Leute die gemeinsam Spaß am zocken haben. Hauptsächlich sind wir in ArmA3, aber auch CS:GO, DotA 2, League of Legends und weiteren Spielen vertreten. Wenn du mindestens 16 Jahre alt bist und bereit bist aktiv mit uns zu zocken, Dann melde dich doch einfach auf unserem Teamspeak oder im Forum. Klicke dazu einfach auf die jeweiligen Buttons. 
+		</p>
+		<p class="m">
+		Viel Spaß beim reinforcen 😊
+        </p>
+		</p>
+    </div>
+    <div class="members">
+        <ul id="memlist">
+
+
+        </ul>
+    </div>
+    </div>
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/materialize.js" type="text/javascript"></script>
+    <script>
+    $(".members").toggle();
+    $("#members").on("click", function()  {
+            $(".members").toggle();
+            $(".members>ul>li").toggle();
+            $("#memlist").load("members.php", function() {
+            Materialize.showStaggeredList('#memlist');});
+            return false;
+    });
+    </script>
+</body>
+</html>
